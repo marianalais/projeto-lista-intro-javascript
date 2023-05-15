@@ -101,15 +101,26 @@ checaStringsMesmoTamanho("ola", "abc");
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
   // implemente sua lógica aqui
+
+  return array[0];
 }
+retornaPrimeiroElemento([1, 2, 3]);
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
   // implemente sua lógica aqui
+  return array[array.length - 1];
 }
+retornaUltimoElemento([1, 2, 3]);
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
+  console.log(array);
+  const primeiro = array[0];
+  const ultimo = array[array.length - 1];
+  array[0] = ultimo;
+  array[array.length - 1] = primeiro;
+  return array;
   // implemente sua lógica aqui
 }
 
@@ -146,9 +157,27 @@ checaRenovacaoRG();
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
+  // bissexto / 400
+  // bissexto / 4 && !/100 && /400
+  const condicao1 = ano % 400 === 0;
+  const condicao2 = ano % 4 === 0 && ano % 100 !== 0;
+  return condicao1 || condicao2;
 }
+checaAnoBissexto();
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
+  const idade = prompt("Você tem mais de 18 anos?");
+  const ensinoMedio = prompt("Você possui ensino médio completo?");
+  const disponibilidade = prompt(
+    "Você possui disponibilidade exclusiva durante os horários do curso?"
+  );
+
+  const respostaIdade = idade.toLowerCase() === "sim";
+  const respostaEnsinoMedio = ensinoMedio.toLowerCase() === "sim";
+  const respostaDisponibilidade = disponibilidade.toLowerCase() === "sim";
+
+  console.log(respostaIdade && respostaEnsinoMedio && respostaDisponibilidade);
 }
+checaValidadeInscricaoLabenu();
