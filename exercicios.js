@@ -101,12 +101,17 @@ checaStringsMesmoTamanho("ola", "abc");
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
   // implemente sua lógica aqui
+
+  return array[0];
 }
+retornaPrimeiroElemento([1, 2, 3]);
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
   // implemente sua lógica aqui
+  return array[array.length - 1];
 }
+retornaUltimoElemento([1, 2, 3]);
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
