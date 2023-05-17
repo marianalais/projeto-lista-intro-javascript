@@ -181,3 +181,5 @@ function checaValidadeInscricaoLabenu() {
   console.log(respostaIdade && respostaEnsinoMedio && respostaDisponibilidade);
 }
 checaValidadeInscricaoLabenu();
+
+//projeto finalizado
